@@ -25,4 +25,5 @@ audiovs.wav
 OG_main.py
 TODO.txt
 test.py
-audio_visualizer.py
+beatmap_generator.py
+beatmap.json

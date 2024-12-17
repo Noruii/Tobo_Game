@@ -4,9 +4,8 @@ from variables import *
 
 class ComboManager:
     """
-        Manejar los combos, dibuja el comobo en pantalla con 'animacion' de agrandar y decrecer
-        utilizando eventos de pygame para controlar la velocidad de la animacion asi como 
-
+        Manejar los combos, actualiza y dibuja el combo en pantalla con 'animacion' de agrandar y decrecer
+        utilizando eventos de pygame para controlar la velocidad de la animacion.
     """
     def __init__(self, font_getter, pos_combo=(205, 920), pos_max_combo=(10, 970)):
         self.get_font = font_getter
@@ -50,11 +49,11 @@ class ComboManager:
         if self.combo == 0:
             combo_surf = self.get_font(20).render(f"COMBO: {self.combo}", True, "white")
         elif 10 <= self.combo <= 30:
-            combo_surf = self.get_font(self.size1).render(f"COMBO: {self.combo}", True, "yellow")
+            combo_surf = self.get_font(self.size1).render(f"COMBO:{self.combo}", True, "yellow")
         elif self.combo > 30:
-            combo_surf = self.get_font(self.size2).render(f"COMBO: {self.combo}", True, "red")
+            combo_surf = self.get_font(self.size2).render(f"COMBO:{self.combo}", True, "red")
         else:
-            combo_surf = self.get_font(self.size3).render(f"COMBO: {self.combo}", True, "white")
+            combo_surf = self.get_font(self.size3).render(f"COMBO:{self.combo}", True, "white")
         SCREEN.blit(combo_surf, self.pos_combo)
 
         # dibujar max combo

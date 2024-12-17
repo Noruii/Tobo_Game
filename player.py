@@ -23,8 +23,8 @@ class PlayerArrows:
     
     def draw_player_arrows(self, keys_pressed):
         """
-        Dibuja las flechas del jugador segun el estado de las teclas
-        (KEYDOWN flecha B -> KEYUP flecha A) para simular cambio de color al presionarlas
+            Dibuja las flechas del jugador segun el estado de las teclas
+            (KEYDOWN flecha B -> KEYUP flecha A) para simular cambio de color al presionarlas
         """
         for key in self.arrows_A:
             # print(key)
